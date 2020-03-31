@@ -9,9 +9,13 @@ Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "BlabberApp.Console", "..\Bl
 EndProject
 Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "BlabberApp.DataStore", "..\BlabberApp.DataStore\BlabberApp.DataStore.csproj", "{531E65A8-9755-4346-AD14-37CF81C43A28}"
 EndProject
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "BlabberApp.DataStoreTest", "BlabberApp.DataStoreTest\BlabberApp.DataStoreTest.csproj", "{7E29D05D-2099-4679-8C04-2B45E4461673}"
+EndProject
 Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "BlabberApp.Domain", "..\BlabberApp.Domain\BlabberApp.Domain.csproj", "{61A73789-B159-473A-A2A3-0A734D5647CF}"
 EndProject
 Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "BlabberApp.WebApi", "..\BlabberApp.WebApi\BlabberApp.WebApi.csproj", "{C3F108B2-001C-4E7A-8165-01658F465353}"
+EndProject
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "BlabberApp.WebApiTest", "BlabberApp.WebApiTest\BlabberApp.WebApiTest.csproj", "{839F62AB-5AB5-44F7-B52A-D4ED87B419C0}"
 EndProject
 Global
 	GlobalSection(SolutionConfigurationPlatforms) = preSolution
