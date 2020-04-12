@@ -10,7 +10,7 @@ using BlabberApp.DataStore.Interfaces;
 
 namespace BlabberApp.DataStore.Plugins
 {
-    public class InMemory : IPlugin
+    public class InMemory : IBlabPlugin, IUserPlugin
     {
 
         private ArrayList buffer;
@@ -37,6 +37,23 @@ namespace BlabberApp.DataStore.Plugins
                 if (Id.Equals(obj.Id))
                 {
                     return obj;
+                }
+            }
+            return null;
+        }
+
+        public IEnumerable ReadByUserId(string Id)
+        {
+            return null;
+        }
+
+        public IEntity ReadByUserEmail(string email)
+        {
+            foreach(User user in buffer)
+            {
+                if(user.Email.Equals(email))
+                {
+                    return user;
                 }
             }
             return null;

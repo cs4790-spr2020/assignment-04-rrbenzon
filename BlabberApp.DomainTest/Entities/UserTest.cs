@@ -15,8 +15,7 @@ namespace BlabberApp.DomainTest.Entities
             string expected = "foobar@example.com";
             harness.ChangeEmail("foobar@example.com");
             // Act
-            string actual = harness.Email; 
-            // Assert
+            string actual = harness.Email; // Assert
             Assert.AreEqual(actual.ToString(), expected.ToString());
         }
         [TestMethod]
@@ -24,6 +23,7 @@ namespace BlabberApp.DomainTest.Entities
         {
             // Arrange
             User harness = new User(); 
+            
             // Act
             var ex = Assert.ThrowsException<FormatException>(() => harness.ChangeEmail("Foobar"));
             // Assert
@@ -50,16 +50,16 @@ namespace BlabberApp.DomainTest.Entities
             Assert.AreEqual("Email is invalid", ex.Message.ToString());
         }
         [TestMethod]
-        public void TestGetSysId()
+        public void TestId()
         {
             // Arrange
             User harness = new User();
-            string expected = harness.getSysId();
+            Guid expected = harness.Id;
             // Act
-            string actual = harness.getSysId();
+            Guid actual = harness.Id;
             // Assert
-            Assert.AreEqual(actual.ToString(), expected.ToString());
-            Assert.AreEqual(true, harness.getSysId() is string);
+            Assert.AreEqual(actual, expected);
+            Assert.AreEqual(true, harness.Id is Guid);
         }
     }
 }
