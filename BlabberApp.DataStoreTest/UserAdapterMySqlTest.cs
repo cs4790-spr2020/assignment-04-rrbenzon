@@ -44,6 +44,13 @@ namespace BlabberApp.DataStoreTest
             //Assert
             Assert.AreEqual(_user.Id, actual.Id);
         }
+
+
+        /*
+            Half the time this test will pass, half the time it fails.
+
+            I tried to figure out why it worked some times and other times failed, but wasn't able to figure it out.
+        */
         [TestMethod]
         public void TestAddAndGetAll()
         {

@@ -9,6 +9,16 @@ namespace BlabberApp.DataStoreTest
     [TestClass]
     public class BlabAdapter_MySql_UnitTests
     {
+        /*
+            The tests in this class will always pass the first time you do the dotnet test.
+
+            However, since in these tests it actually creates blabs in the database, to have it pass the next
+            time you run the test, you either have to manually delete those blabs from the databse or just
+            change the email address in each test.
+
+            I couldn't figure out how to make it so that the blabs are deleted automatically when the test is complete
+        */
+        
         private BlabAdapter _harness = new BlabAdapter(new MySqlBlab());
 
         [TestMethod]
